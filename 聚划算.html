@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		.head{
+			width: 16rem;
+			height:2.5rem;
+			line-height: 2.5rem;
+			background:-webkit-linear-gradient(#fff,#ebebeb);
+		}
+		.head h1{
+			width: 3.7rem;
+			height: 1rem;
+			background: url(img2/loggo.png) no-repeat;
+			background-size: 100%;
+			margin: 0.75rem auto;
+		}
+		.head a {
+			width: 3rem;
+			height: 1.4rem;
+			position: absolute;
+			top: 0.75rem;
+			left:0.5rem;
+			background: url(img2/1.png) no-repeat;
+			background-size: 100%;
+		}
+		.banner ul{
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			margin-top:0.5rem;
+		}
+		.banner li{
+			width: 0.25rem;
+			height:0.25rem;
+			border-radius: 50%;
+			background: #a9a9a9;
+			margin-right:0.25rem; 	
+		}
+		.banner div{
+			width: 16rem;
+			height: 7.15rem;
+			overflow: hidden;
+		}
+	    .banner-list{
+			width:80rem;
+			height: 7.15rem;
+			-webkit-transform:translate3d(-16rem,0,0);
+	    }
+	     .banner-list li{
+	     	width: 16rem;
+			height: 7.15rem;
+			margin: 0;
+	     }
+		.banner-list li img {
+			width: 100%;
+			vertical-align:top;
+		}
+		.banner li.active{
+			background: #ff4300;
+		}
+		.manu{
+			margin:0 0.4rem;
+			overflow: hidden;
+		}
+		.manu li{
+			width:25%;
+			text-align: center;
+			float: left;
+			margin-top:1rem;
+		}
+		.manu li p{
+			font-size: 0.6rem;
+			margin-top: 0.5rem;
+		}
+		.manu li p a{
+			color: #999999;
+			text-decoration: none;
+		}
+		.manu .icon{
+			width:2rem;
+			height: 2rem;
+			display: inline-block;
+			background-size: 100%;
+			background-repeat: no-repeat; 
+		}	
+		.manu .icon1{
+			background-image: url(img2/icon1.png);
+		}
+		.manu .icon2{
+			background-image: url(img2/icon2.png);
+		}
+		.manu .icon3{
+			background-image: url(img2/icon3.png);
+		}
+		.manu .icon4{
+			background-image: url(img2/icon4.png);
+		}
+		.manu .icon5{
+			background-image: url(img2/icon5.png);
+		}
+		.manu .icon6{
+			background-image: url(img2/icon6.png);
+		}
+		.manu .icon7{
+			background-image: url(img2/icon7.png);
+		}
+		.manu .icon8{
+			background-image: url(img2/icon8.png);
+		}
+		section{
+			width: 15rem;
+			margin: 0 0.5rem;
+		}
+		.hosby {
+			margin-top: 1.5rem;
+			overflow: hidden;
+			padding-bottom: 0.5rem;
+			border-bottom: 1px solid #dcdcdc;
+		}
+		.hosby p{
+			font-size: 0.7rem;
+			color: #333333;
+			border-left: 2px solid #d51938;
+			float: left;
+			padding-left: 0.5rem;
+			font-weight: bold;
+		}
+		.hosby span{
+			float: right;
+			font-size: 0.7rem;
+			color: #333333;
+			font-weight: bold;
+		}
+		.bhos{
+			margin-bottom: 0.5rem;
+			height: 3rem;
+			background: url(img2/right.png) no-repeat center right #f4f4f4;
+			background-size: 0.5rem;
+		}
+		.hos1 {
+			margin-top: 0.75rem;
+		}
+
+		.bhos .num{
+			width: 1.5rem;
+			height: 3rem;
+			font-size: 1.2rem;
+			text-align: center;
+			font-weight: bold;
+			line-height: 3rem;
+			color: #fff;
+			background: #e00202;
+			float: left;
+		}
+		.hos2 .num{
+			background: #ff4800;
+		}
+		.hos3 .num{
+			background: #ff7300;
+		}
+		.hos4 .num{
+			background: #ff9d00;
+		}
+		.hos5 .num{
+			background: #ffa800;
+		}
+		.hos6 .num{
+			background: #ffb400;
+		}
+		.hos7 .num{
+			background: #ffba00;
+		}
+		.hos8 .num{
+			background: #fcd000;
+		}
+		.hos9 .num{
+			background: #ffd719;
+		}
+		.hos10 .num{
+			background: #ffe152;
+		}
+		.bhos img{
+			width: 4.875rem;
+			height: 3rem;
+			display:inline-block;
+			vertical-align: top;
+		}
+		.right{
+			width: 7rem;
+			display: inline-block;
+			overflow: hidden;
+			line-height: 3rem;
+		}
+		.right div{
+			float: left;
+		}
+		.right .z{
+			color: #d51938;
+		}
+		.right .yj{
+			text-decoration: line-through;
+		}
+		.right .cos{
+			float: right;
+			font-size: 0.85rem;
+			color: #d51938;
+		}
+		.right p{
+			color: #999;
+			font-size: 0.6rem;
+			line-height: 0.9rem;
+		}
+		.right div{
+			margin-top: 0.425rem;
+		}
+		.guang{
+			line-height: 2rem;
+			text-align: center;
+			background:#f5f5f5;
+			height: 2rem;
+			color: #666;
+			font-size: 0.7rem;
+			margin-top: 0.5rem
+		}
+		.shap{
+			overflow: hidden;
+			margin-top:0.5rem;
+		}
+		.shap div{
+			height: 8.8rem;
+			width: 3.75rem;
+			background: url(img2/poto1.png) no-repeat;
+			background-size: 100%;
+			float: left;
+		} 
+		.shap ul{
+			width: 11.25rem;
+			height: 8.8rem;
+			float: right;
+			overflow: hidden;
+			border-top:1px solid #eeeeee;
+		}
+		.shap ul li{
+			float: left;
+			width:3.75rem;
+			height:2.25rem;
+			border:1px solid #eeeeee;
+			color: #666666;
+			font-size: 0.7;
+			line-height: 2.25rem;
+			text-align: center;
+			box-sizing: border-box;
+			margin-left:-1px;
+			margin-top:-1px;
+		}
+		.last{
+			display: table;
+			margin-top:1rem;
+		}
+		.last div{
+			display: table-cell;
+			width:5rem;
+			height:4rem;
+
+		}
+		.last .last1{
+			background: url(img2/3.png) no-repeat;
+			background-size: 100%;
+		}
+		.last .last2{
+			background: url(img2/2.png) no-repeat;
+			background-size: 100%;
+		}
+		.last .last3{
+			background: url(img2/4.png) no-repeat;
+			background-size: 100%;
+		}
+		.box{
+			height: 2.2rem;
+			width:15.25rem;
+			padding-left: 0.75rem;
+			background:url(img2/top.png) no-repeat 14.75rem center #f8f8f8;
+			background-size: 0.5rem;
+			line-height: 2.2rem;
+			margin-top: 0.5rem;
+			
+		}
+		.box a{
+			text-decoration: none;
+			font-size: 0.7rem;
+			color:#333;
+		}
+		.box .sec{
+			margin-left: 0.9rem;
+		}
+		.box span{
+			margin-left:7rem;
+			font-size: 0.7rem;
+			color:#333;
+		}
+		.foot{
+			height:2.6rem;
+			padding-top: 1rem;
+			background: #eeeeee;
+			text-align: center;
+		}
+		.foot h2{
+			font-size:0.7rem;
+			color: #333;
+		}
+		.foot p{
+			font-size:0.55rem;
+			color: #999;
+			 margin-top:0.75rem;
+		}
+	</style>
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded',function(){
+			var oUl=document.querySelector('.banner-list');
+			var aLi=oUl.children;
+			var x=-aLi[0].offsetWidth;
+			var inow=1;
+			var bOk=true;
+			oUl.addEventListener('touchstart',function(ev){
+				if(!bOk)return;
+				bOk=false;
+				oUl.style.WebkitTransition='none';
+				var downx=ev.targetTouches[0].clientX;
+				var disX=downx-x;
+				document.addEventListener('touchmove',fnmove,false);
+				document.addEventListener('touchend',fnend,false);
+				function fnmove(ev){
+
+					x = ev.targetTouches[0].clientX-disX;
+					oUl.style.WebkitTransform='translate3d('+x+'px,0,0)';
+
+				}
+				function fnend(ev){
+					oUl.style.WebkitTransition='1s';
+					document.removeEventListener('touchmove',fnmove,false);
+					document.removeEventListener('touchend',fnend,false);
+					var upx=ev.changedTouches[0].clientX;
+					var cx=Math.abs(upx-downx);
+					if(upx==downx){
+						bOk=true;
+					}
+					if(cx>60){
+						if(upx-downx<0){
+							inow++;
+						}else{
+							inow--;
+						}
+						x=-inow*aLi[0].offsetWidth;
+						oUl.style.WebkitTransform='translate3d('+x+'px,0,0)';
+					}else{
+						x=-inow*aLi[0].offsetWidth;
+						oUl.style.transform='translate3d('+x+'px,0,0)';
+					}	
+				}
+				ev.preventDefault();
+			},false);
+			oUl.addEventListener('transitionend',function(){
+				bOk=true;
+				if(inow==aLi.length-1){
+					oUl.style.WebkitTransition='none';
+					inow=1;
+					x=-inow*aLi[0].offsetWidth;
+					oUl.style.WebkitTransform='translate3d('+x+'px,0,0)';
+				}
+				if(inow==0){
+					oUl.style.WebkitTransition='none';
+					inow=aLi.length-2;
+					x=-inow*aLi[0].offsetWidth;
+					oUl.style.WebkitTransform='translate3d('+x+'px,0,0)';
+				}
+			},false);
+		},false)
+	</script>
+	<script type="text/javascript">
+		(function(win,doc){
+			win.addEventListener('resize',change,false);
+			change();
+			function change(){
+				doc.documentElement.style.fontSize=20/320*doc.documentElement.clientWidth+'px';
+			}
+		})(window,document)
+	</script>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<a href="javascript:;"></a>
+			<h1></h1>
+		</div>
+	</header>
+	<div class="banner">
+		<div>
+			<ul class="banner-list">
+				<li><img src="img2/3.jpg"></li>
+				<li><img src="img2/1.jpg"></li>
+				<li><img src="img2/2.jpg"></li>
+				<li><img src="img2/3.jpg"></li>
+				<li><img src="img2/1.jpg"></li>
+			</ul>
+		</div>
+		
+		<ul>
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<ul class="manu">
+		<li>
+			<a href="javascript:;"  class="icon icon1"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+		<li>
+			<a href="javascript:;"  class="icon icon2"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+		<li>
+			<a href="javascript:;"  class="icon icon3"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+		<li>
+			<a href="javascript:;"  class="icon icon4"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+		<li>
+			<a href="javascript:;"  class="icon icon5"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+		<li>
+			<a href="javascript:;"  class="icon icon6"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+		<li>
+			<a href="javascript:;"  class="icon icon7"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+		<li>
+			<a href="javascript:;"  class="icon icon8"></a>
+			<p><a href="javascript:;">商品</a></p>
+		</li>
+	</ul>
+	<section>
+		<div class="hosby">
+			<p>聚划算热卖排行</p>
+			<span>YOP10</span>
+		</div>
+		<ol class="hos">
+			<li class="bhos hos1">
+				<span class="num">1</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos2">
+				<span class="num">2</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos3">
+				<span class="num">3</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos4">
+				<span class="num">4</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos5">
+				<span class="num">5</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos6">
+				<span class="num">6</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos7">
+				<span class="num">7</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos8">
+				<span class="num">8</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos9">
+				<span class="num">9</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+			<li class="bhos hos10">
+				<span class="num">10</span>
+				<img src="img2/hos1.png">
+				<div class="right">
+					<div>
+						<p>已售68423</p>
+						<p><span class="z">2.3</span>折 ￥<span class="yj">299</span></p>
+					</div>
+					<span class="cos">￥51</span>
+				</div>
+			</li>
+		</ol>
+		<p class="guang">更多划算 逛起来！</p>
+		<div class="shap">
+			<div></div>
+			<ul>
+				<li>服饰</li>
+				<li>配饰</li>
+				<li>美妆</li>
+				<li>鞋包</li>
+				<li>食品</li>
+				<li>家居</li>
+				<li>运动</li>
+				<li>电器</li>
+				<li>百货</li>
+				<li>母婴</li>
+				<li>数码</li>
+				<li>更多</li>
+			</ul>
+		</div>
+		<p class="guang">更多划算 逛起来！</p>
+		<div class="shap">
+			<div></div>
+			<ul>
+				<li>服饰</li>
+				<li>配饰</li>
+				<li>美妆</li>
+				<li>鞋包</li>
+				<li>食品</li>
+				<li>家居</li>
+				<li>运动</li>
+				<li>电器</li>
+				<li>百货</li>
+				<li>母婴</li>
+				<li>数码</li>
+				<li>更多</li>
+			</ul>
+		</div>
+		<p class="guang">更多划算 逛起来！</p>
+		<div class="shap">
+			<div></div>
+			<ul>
+				<li>服饰</li>
+				<li>配饰</li>
+				<li>美妆</li>
+				<li>鞋包</li>
+				<li>食品</li>
+				<li>家居</li>
+				<li>运动</li>
+				<li>电器</li>
+				<li>百货</li>
+				<li>母婴</li>
+				<li>数码</li>
+				<li>更多</li>
+			</ul>
+		</div>
+		<p class="guang">品牌折扣 逛起来！</p>
+		<div class="last">
+			<div class="last1"></div>
+			<div class="last2"></div>
+			<div class="last3"></div>
+		</div>
+		
+	</section>
+	<footer>
+		<div class="box">
+			<a href="javascript:;">登录</a>
+			<a href="javascript:;" class="sec">注册 </a>
+			<span>TOP</span>
+		</div>
+		<div class="foot">
+			<h2>标准版 电脑版</h2>
+			<p>o2013浙B2-20080224 服务中心</p>
+		</div>
+	</footer>
+</body>
+</html>
